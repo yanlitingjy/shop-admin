@@ -1,3 +1,3 @@
 <template>
-    <div>1222</div>
+    <div>商品</div>
 </template>
