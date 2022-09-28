@@ -1,13 +1,12 @@
 import { defineStore } from 'pinia'
 
-export const useTodos = defineStore('todos', {
-    state: () => ({
-        
-    }),
-    getters: {
-        
+export const useIsCollapseStore = defineStore('collapse', {
+    state: () => {
+        return { isCollapse: true }
     },
     actions: {
-       
+        toggleBar() {
+            this.isCollapse = !this.isCollapse
+        },
     },
 })

@@ -5,10 +5,10 @@
         background-color="#304156"
         text-color="#fff" 
         active-text-color="#ffd04b"
-        :collapse="isCollapse"
+        :collapse="collapse.isCollapse"
         router>
         <el-menu-item index="home">
-            <el-icon><icon-menu /></el-icon>
+            <el-icon><Menu /></el-icon>
             <span>首页</span>
         </el-menu-item>
         <el-sub-menu index="product">
@@ -48,8 +48,8 @@
     </el-menu>
 </template>
 <script lang="ts" setup>
-import { ref } from 'vue'
-const isCollapse = ref(false)
+import { useIsCollapseStore } from '@/store/index'
+const collapse = useIsCollapseStore()
 </script>
 <style scoped>
     .el-menu{

@@ -1,12 +1,16 @@
 <template>
     <div class="common-layout">
         <el-container>
-            <el-aside width="200px">
+            <el-aside>
                 <v-menu/>
             </el-aside>
             <el-container>
                 <el-header>
-                    <v-bread-crumb></v-bread-crumb>
+                    <div>
+                        <v-toggle-sidebar></v-toggle-sidebar>
+                        <v-bread-crumb></v-bread-crumb>
+                    </div>
+                   
                     <v-full-screen></v-full-screen>
                 </el-header>
                 <el-main>
@@ -20,6 +24,7 @@
 import vMenu from './component/menu.vue'
 import vBreadCrumb from './component/breadCrumb.vue'
 import vFullScreen from './component/fullScreen.vue'
+import vToggleSidebar from './component/toggleSidebar.vue'
 </script>
 <style lang="scss" scoped>
     .common-layout{
@@ -33,6 +38,7 @@ import vFullScreen from './component/fullScreen.vue'
         }
 
         .el-aside {
+            width:auto;
             background-color: #304156;
             color: #333;
             text-align: center;
