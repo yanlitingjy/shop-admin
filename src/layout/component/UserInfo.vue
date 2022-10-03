@@ -20,6 +20,7 @@ import { ElMessage, ElMessageBox } from "element-plus";
 import { logout } from "@/api/common";
 import { useRouter } from "vue-router";
 import { useUserInfoStore } from "@/store";
+import { removeItem } from "@/utils/storage"
 
 const router = useRouter();
 const user = useUserInfoStore()
@@ -48,6 +49,7 @@ const handleLogou = () => {
             router.push({
                 name: "login",
             });
+            removeItem('user')
         })
         .catch(() => {
             ElMessage({

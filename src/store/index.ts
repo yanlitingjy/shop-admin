@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import { IUserInfo } from '@/api/types/common'
+import { getItem,setItem } from '@/utils/storage'
 
 export const useIsCollapseStore = defineStore('collapse', {
     state: () => {
@@ -15,23 +16,13 @@ export const useIsCollapseStore = defineStore('collapse', {
 export const useUserInfoStore = defineStore('user', {
     state: ()=> {
         return {
-            userInfo:null as IUserInfo | null,
-            name:'123'
+            userInfo:getItem<IUserInfo>('user'),
         }
-    },
-    persist: {
-        enabled: true,
-        strategies: [
-            {
-                key: 'user',
-                storage: localStorage,
-            },
-        ],
     },
     actions: {
         setUser(value:IUserInfo | null) {
-            console.log(value)
             this.userInfo = value
+            setItem('user', value)
         }
     },
 })

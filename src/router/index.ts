@@ -6,7 +6,6 @@ import productRoutes from './modules/product'
 import orderRoute from './modules/order'
 import mediaRoute from './modules/media'
 import permissionRoute from './modules/permission'
-
 import pinia from '@/plugins/pinia'
 import { useUserInfoStore } from "@/store";
 const routes: RouteRecordRaw[] = [
@@ -40,7 +39,6 @@ const routes: RouteRecordRaw[] = [
         ]
     }
 ]
-console.log(routes)
 const router = createRouter({
     history: createWebHashHistory(),
     routes
@@ -49,7 +47,7 @@ const router = createRouter({
 router.beforeEach((to,form) => {
     nprogress.start()
     const userStore = useUserInfoStore(pinia)
-    console.log(userStore)
+    console.log(userStore.userInfo)
     if (to.meta.requiresAuth && !userStore.userInfo) {
         // 此路由需要授权，请检查是否已登录
         // 如果没有，则重定向到登录页面

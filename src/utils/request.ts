@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig } from "axios";
 import { ElMessage, ElMessageBox } from 'element-plus'
 import router from '@/router/'
-import pinia from "@/plugins/pinia";
+import pinia from '@/plugins/pinia'
 import { useUserInfoStore } from "@/store";
 const userStore = useUserInfoStore(pinia);
 // request 不支持泛型
