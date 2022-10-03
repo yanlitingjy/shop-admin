@@ -1,27 +1,27 @@
 <template>
     <el-menu 
         class="el-menu-vertical-demo"
-        default-active="2" 
+        :default-active="$route.path" 
         background-color="#304156"
         text-color="#fff" 
         active-text-color="#ffd04b"
         :collapse="collapse.isCollapse"
         router>
-        <el-menu-item index="home">
+        <el-menu-item index="/home">
             <el-icon><Menu /></el-icon>
             <span>首页</span>
         </el-menu-item>
-        <el-sub-menu index="product">
+        <el-sub-menu index="/product">
             <template #title>
                 <el-icon><location /></el-icon>
                 <span>商品</span>
             </template>
-            <el-menu-item index="product_list">商品列表</el-menu-item>
-            <el-menu-item index="product_classify">商品分类</el-menu-item>
-            <el-menu-item index="product_attr">商品规格</el-menu-item>
-            <el-menu-item index="product_reply">商品评论</el-menu-item>
+            <el-menu-item index="/product/product_list">商品列表</el-menu-item>
+            <el-menu-item index="/product/product_classify">商品分类</el-menu-item>
+            <el-menu-item index="/product/product_attr">商品规格</el-menu-item>
+            <el-menu-item index="/product/product_reply">商品评论</el-menu-item>
         </el-sub-menu>
-        <el-sub-menu index="order">
+        <!-- <el-sub-menu index="order">
             <template #title>
                 <el-icon><location /></el-icon>
                 <span>订单</span>
@@ -30,8 +30,8 @@
             <el-menu-item index="1-2">商品分类</el-menu-item>
             <el-menu-item index="1-2">商品规格</el-menu-item>
             <el-menu-item index="1-2">商品评论</el-menu-item>
-        </el-sub-menu>
-        <el-menu-item index="media">
+        </el-sub-menu> -->
+        <!-- <el-menu-item index="media">
             <el-icon><setting /></el-icon>
             <span>媒体</span>
         </el-menu-item>
@@ -44,7 +44,7 @@
             <el-menu-item index="1-2">商品分类</el-menu-item>
             <el-menu-item index="1-2">商品规格</el-menu-item>
             <el-menu-item index="1-2">商品评论</el-menu-item>
-        </el-sub-menu>
+        </el-sub-menu> -->
     </el-menu>
 </template>
 <script lang="ts" setup>

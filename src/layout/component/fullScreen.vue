@@ -14,3 +14,13 @@ const toggleFullScreen =() => {
     }
 }
 </script>
+<style scoped lang="scss">
+    .el-header{
+        .full-screen{
+            line-height: 60px;
+            display: inline-block;
+            cursor: pointer;
+        }
+    }
+    
+</style>

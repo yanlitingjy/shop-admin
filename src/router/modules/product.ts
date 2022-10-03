@@ -1,10 +1,11 @@
 import { RouteRecordRaw, RouterView } from 'vue-router';
 const routes: RouteRecordRaw = {
-    path: '/product',
-    name: '',
+    path: 'product',
+    name: 'product',
     component: RouterView,
     meta: {
-        title:'商品'
+        title:'商品',
+        requiresAuth: true
     },
     children: [
         {
@@ -43,4 +44,6 @@ const routes: RouteRecordRaw = {
 }
 
 
+
 export default routes
+

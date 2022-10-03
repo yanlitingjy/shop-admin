@@ -16,17 +16,5 @@ export default defineConfig({
         additionalData: `@import "@/styles/variables.scss";`
       }
     }
-  },
-  server: {
-    proxy: {
-      // 使用 proxy 实例
-      '/api': {
-        target: 'http://jsonplaceholder.typicode.com',
-        changeOrigin: true,
-        configure: (proxy, options) => {
-          // proxy 是 'http-proxy' 的实例
-        }
-      },
-    }
   }
 })

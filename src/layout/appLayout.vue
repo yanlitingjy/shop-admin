@@ -10,8 +10,10 @@
                         <v-toggle-sidebar></v-toggle-sidebar>
                         <v-bread-crumb></v-bread-crumb>
                     </div>
-                   
-                    <v-full-screen></v-full-screen>
+                    <div>
+                        <v-user-info></v-user-info>
+                        <v-full-screen></v-full-screen>
+                    </div>
                 </el-header>
                 <el-main>
                     <router-view></router-view>
@@ -25,6 +27,7 @@ import vMenu from './component/menu.vue'
 import vBreadCrumb from './component/breadCrumb.vue'
 import vFullScreen from './component/fullScreen.vue'
 import vToggleSidebar from './component/toggleSidebar.vue'
+import vUserInfo from './component/UserInfo.vue'
 </script>
 <style lang="scss" scoped>
     .common-layout{
